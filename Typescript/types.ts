@@ -1,6 +1,8 @@
 // 1. Inferred string
 let name = "Mahidi";
 console.log(name);
+name = 20
+
 
 // 2. Inferred Union (number | string)
 let cups = Math.random() > 0.5 ? 10 : "World Cup";
