@@ -1,7 +1,7 @@
 // 1. Inferred string
 let name = "Mahidi";
 console.log(name);
-name = 20
+//name = 20
 
 
 // 2. Inferred Union (number | string)
@@ -52,3 +52,27 @@ for (let number of numbers) { // Use for...of for values!
 console.log("Current Number:", currentNumber); // Prints '28'
 currentNumber = 42;
 console.log("Updated Number:", currentNumber); // Prints 42
+
+
+
+// Define the contract/shape for a Student object
+interface Student {
+  id: number;
+  name: string;
+  isEnrolled: boolean;
+  email?: string; // The '?' means this property is OPTIONAL
+}
+
+// Create an object that follows the Student shape
+let studentA: Student = {
+  id: 101,
+  name: "Rahim",
+  isEnrolled: true
+};
+
+// If you forget a required field, TypeScript will warn you!
+let studentB: Student = {
+  id: 102,
+  name: "Karim"
+  // ❌ Error: Property 'isEnrolled' is missing!
+};
